@@ -1,4 +1,4 @@
-# JHipster Registry
+# Cloud Registry
 
 [![Build Status][travis-image]][travis-url]  [![Docker Pulls](https://img.shields.io/docker/pulls/jhipster/jhipster-registry.svg)](https://hub.docker.com/r/jhipster/jhipster-registry/)
 
@@ -25,3 +25,8 @@ To run the cloned repository;
 
 [travis-image]: https://travis-ci.org/jhipster/jhipster-registry.svg?branch=master
 [travis-url]: https://travis-ci.org/jhipster/jhipster-registry
+
+
+## Push to Docker Hub
+
+docker push chenflat/cloud-register:3.2.4

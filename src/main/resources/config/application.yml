@@ -85,7 +85,7 @@ eureka:
             defaultZone: http://admin:${security.user.password:admin}@localhost:${server.port}/eureka/
     server:
         # see discussion about enable-self-preservation:
-        # https://github.com/jhipster/generator-jhipster/issues/3654
+        # https://github.com/chenflat/generator-jhipster/issues/3654
         enable-self-preservation: false
     dashboard:
         path: /registry

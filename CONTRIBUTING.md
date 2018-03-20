@@ -2,7 +2,7 @@
 
 Are you ready to contribute to the JHipster Registry? We'd love to have you on board, and we will help you as much as we can.
 
-Our contributing guidelines are basically the same as [the JHipster generator contributing guidelines](https://github.com/jhipster/generator-jhipster/blob/master/CONTRIBUTING.md).
+Our contributing guidelines are basically the same as [the JHipster generator contributing guidelines](https://github.com/chenflat/generator-jhipster/blob/master/CONTRIBUTING.md).
 
 Here are the guidelines we'd like you to follow so that we can be of more help:
 
@@ -20,12 +20,12 @@ This is the JHipster bug tracker, and it is used for [Issues and Bugs](#issue) a
 If you have a question on using JHipster, or if you need help with your JHipster project, please [read our help page](http://www.jhipster.tech/help/) and use the [JHipster tag on StackOverflow](http://stackoverflow.com/tags/jhipster) or join our [Gitter.im chat room](https://gitter.im/jhipster/generator-jhipster).
 
 ## <a name="issue"></a> Issues and Bugs
-If you find a bug in the source code or a mistake in the documentation, you can help us by [submitting a ticket](https://opensource.guide/how-to-contribute/#opening-an-issue) to our [GitHub issues](https://github.com/jhipster/jhipster-registry/issues). Even better, you can submit a Pull Request to our [JHipster Registry project](https://github.com/jhipster/jhipster-registry) or to our [Documentation project](https://github.com/jhipster/jhipster.github.io).
+If you find a bug in the source code or a mistake in the documentation, you can help us by [submitting a ticket](https://opensource.guide/how-to-contribute/#opening-an-issue) to our [GitHub issues](https://github.com/chenflat/jhipster-registry/issues). Even better, you can submit a Pull Request to our [JHipster Registry project](https://github.com/chenflat/jhipster-registry) or to our [Documentation project](https://github.com/chenflat/jhipster.github.io).
 
 **Please see the Submission Guidelines below**.
 
 ## <a name="feature"></a> Feature Requests
-You can request a new feature by submitting a ticket to our [GitHub issues](https://github.com/jhipster/jhipster-registry/issues). If you
+You can request a new feature by submitting a ticket to our [GitHub issues](https://github.com/chenflat/jhipster-registry/issues). If you
 would like to implement a new feature then consider what kind of change it is:
 
 * **Major Changes** that you wish to contribute to the project should be discussed first. Please open a ticket which clearly states that it is a feature request in the title and explain clearly what you want to achieve in the description, and the JHipster team will discuss with you what should be done in that ticket. You can then start working on a Pull Request.
@@ -34,7 +34,7 @@ would like to implement a new feature then consider what kind of change it is:
 ## <a name="submit"></a> Submission Guidelines
 
 ### [Submitting an Issue](https://opensource.guide/how-to-contribute/#opening-an-issue)
-Before you submit your issue search the [archive](https://github.com/jhipster/jhipster-registry/issues?utf8=%E2%9C%93&q=is%3Aissue), maybe your question was already answered.
+Before you submit your issue search the [archive](https://github.com/chenflat/jhipster-registry/issues?utf8=%E2%9C%93&q=is%3Aissue), maybe your question was already answered.
 
 If your issue appears to be a bug, and has not been reported, open a new issue.
 Help us to maximize the effort we can spend fixing issues and adding new
@@ -51,14 +51,14 @@ chances of your issue being dealt with quickly:
 * **JHipster Registry Version(s)** - is it a regression?
 * **Browsers and Operating System** - is this a problem with all browsers or only IE8?
 
-Click [here](https://github.com/jhipster/jhipster-registry/issues/new) to open a bug issue with a pre-filled template. For feature requests and enquiries you can use [this template][feature-template].
+Click [here](https://github.com/chenflat/jhipster-registry/issues/new) to open a bug issue with a pre-filled template. For feature requests and enquiries you can use [this template][feature-template].
 
 Issues opened without any of these info will be **closed** without any explanation.
 
 ### [Submitting a Pull Request](https://opensource.guide/how-to-contribute/#opening-a-pull-request)
 Before you submit your pull request consider the following guideline:
 
-* Search [GitHub](https://github.com/jhipster/jhipster-registry/pulls?utf8=%E2%9C%93&q=is%3Apr) for an open or closed Pull Request
+* Search [GitHub](https://github.com/chenflat/jhipster-registry/pulls?utf8=%E2%9C%93&q=is%3Apr) for an open or closed Pull Request
   that relates to your submission.
 
 ## <a name="rules"></a> Coding Rules
@@ -123,4 +123,4 @@ see http://spring.io/blog/2014/09/26/spring-boot-1-1-7-released
 Fix #1234
 ```
 
-[feature-template]: https://github.com/jhipster/jhipster-registry/issues/new?body=*%20**Overview%20of%20the%20request**%0A%0A%3C!--%20what%20is%20the%20query%20or%20request%20--%3E%0A%0A*%20**Motivation%20for%20or%20Use%20Case**%20%0A%0A%3C!--%20explain%20why%20this%20is%20a%20required%20for%20you%20--%3E%0A%0A%0A*%20**Browsers%20and%20Operating%20System**%20%0A%0A%3C!--%20is%20this%20a%20problem%20with%20all%20browsers%20or%20only%20IE8%3F%20--%3E%0A%0A%0A*%20**Related%20issues**%20%0A%0A%3C!--%20has%20a%20similar%20issue%20been%20reported%20before%3F%20--%3E%0A%0A*%20**Suggest%20a%20Fix**%20%0A%0A%3C!--%20if%20you%20can%27t%20fix%20this%20yourself%2C%20perhaps%20you%20can%20point%20to%20what%20might%20be%0A%20%20causing%20the%20problem%20(line%20of%20code%20or%20commit)%20--%3E
+[feature-template]: https://github.com/chenflat/jhipster-registry/issues/new?body=*%20**Overview%20of%20the%20request**%0A%0A%3C!--%20what%20is%20the%20query%20or%20request%20--%3E%0A%0A*%20**Motivation%20for%20or%20Use%20Case**%20%0A%0A%3C!--%20explain%20why%20this%20is%20a%20required%20for%20you%20--%3E%0A%0A%0A*%20**Browsers%20and%20Operating%20System**%20%0A%0A%3C!--%20is%20this%20a%20problem%20with%20all%20browsers%20or%20only%20IE8%3F%20--%3E%0A%0A%0A*%20**Related%20issues**%20%0A%0A%3C!--%20has%20a%20similar%20issue%20been%20reported%20before%3F%20--%3E%0A%0A*%20**Suggest%20a%20Fix**%20%0A%0A%3C!--%20if%20you%20can%27t%20fix%20this%20yourself%2C%20perhaps%20you%20can%20point%20to%20what%20might%20be%0A%20%20causing%20the%20problem%20(line%20of%20code%20or%20commit)%20--%3E

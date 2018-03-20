@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>io.github.jhipster.registry</groupId>
-    <artifactId>jhipster-registry</artifactId>
+    <artifactId>cloud-registry</artifactId>
     <version>3.2.4</version>
     <packaging>war</packaging>
-    <name>JHipster Registry</name>
-    <description>JHipster service registry, made with Netflix Eureka and Spring Cloud Config</description>
+    <name>Cloud Registry</name>
+    <description>Cloud service registry, made with Netflix Eureka and Spring Cloud Config</description>
 
     <properties>
         <!-- Build properties -->
@@ -349,11 +349,11 @@
                     <configuration>
                         <rules>
                             <requireMavenVersion>
-                                <message>You are running an older version of Maven. JHipster requires at least Maven ${maven.version}</message>
+                                <message>You are running an older version of Maven. Cloud requires at least Maven ${maven.version}</message>
                                 <version>[${maven.version},)</version>
                             </requireMavenVersion>
                             <requireJavaVersion>
-                                <message>You are running an older version of Java. JHipster requires at least JDK ${java.version}</message>
+                                <message>You are running an older version of Java. Cloud requires at least JDK ${java.version}</message>
                                 <version>[${java.version}.0,)</version>
                             </requireJavaVersion>
                         </rules>

@@ -29,7 +29,7 @@ eureka:
         hostname: eureka-peer-2
     server:
         # see discussion about enable-self-preservation:
-        # https://github.com/jhipster/generator-jhipster/issues/3654
+        # https://github.com/chenflat/generator-jhipster/issues/3654
         enable-self-preservation: false
         registry-sync-retry-wait-ms: 500
         a-sgcache-expiry-timeout-ms: 60000
