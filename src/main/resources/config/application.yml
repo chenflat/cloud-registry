@@ -16,7 +16,7 @@
 
 spring:
     application:
-        name: jhipster-registry
+        name: cloud-registry
     jackson:
         serialization.write_dates_as_timestamps: false
     mvc:
@@ -29,7 +29,7 @@ server:
     port: 8761
 
 logging:
-    file: target/jhipster-registry.log
+    file: target/cloud-registry.log
 
 ribbon:
     eureka:
@@ -65,8 +65,8 @@ security:
 
 eureka:
     instance:
-        appname: jhipster-registry
-        instanceId: jhipsterRegistry:${spring.application.instance_id:${random.value}}
+        appname: cloud-registry
+        instanceId: cloudRegistry:${spring.application.instance_id:${random.value}}
         prefer-ip-address: true
         lease-renewal-interval-in-seconds: 5
         lease-expiration-duration-in-seconds: 10
@@ -93,6 +93,6 @@ eureka:
 jhipster:
     swagger:
         default-include-pattern: /(api|config)/.*
-        title: JHipster Registry API
-        description: JHipster Registry API documentation
+        title: Ops Cloud Registry API
+        description: Ops Cloud Registry API documentation
         version: ${info.project.version}

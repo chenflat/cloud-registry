@@ -7,7 +7,7 @@
     <version>3.2.4</version>
     <packaging>war</packaging>
     <name>Cloud Registry</name>
-    <description>Cloud service registry, made with Netflix Eureka and Spring Cloud Config</description>
+    <description>Ops Cloud service registry, made with Netflix Eureka and Spring Cloud Config</description>
 
     <properties>
         <!-- Build properties -->

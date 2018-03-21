@@ -1,6 +1,6 @@
 {
-  "name": "JHipster Registry",
-  "description": "This is the JHipster registry service, based on Spring Cloud Netflix, Eureka and Spring Cloud Config.",
+  "name": "Ops Cloud Registry",
+  "description": "This is the Ops Cloud registry service, based on Spring Cloud Netflix, Eureka and Spring Cloud Config.",
   "logo": "http://www.jhipster.tech/images/logo/logo-jhipster-drink-coffee.png",
   "env": {
     "JHIPSTER_PASSWORD": {

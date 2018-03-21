@@ -1,7 +1,7 @@
 {
   "name": "cloud-registry",
   "version": "3.2.4",
-  "description": "JHipster service registry, made with Netflix Eureka and Spring Cloud Config",
+  "description": "Ops Cloud service registry, made with Netflix Eureka and Spring Cloud Config",
   "private": true,
   "cacheDirectories": [
     "node_modules"
