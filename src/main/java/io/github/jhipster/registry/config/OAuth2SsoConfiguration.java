@@ -28,7 +28,7 @@ public class OAuth2SsoConfiguration extends WebSecurityConfigurerAdapter {
             .csrf().disable()
             .requestMatcher(new NegatedRequestMatcher(authorizationHeaderRequestMatcher))
             .httpBasic()
-            .realmName("JHipster Registry")
+            .realmName("Ops Cloud Registry")
         .and()
             .authorizeRequests()
             .antMatchers("/services/**").authenticated()

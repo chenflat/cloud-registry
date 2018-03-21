@@ -8,7 +8,7 @@ export const HOME_ROUTE: Route = {
     component: HomeComponent,
     data: {
         authorities: [],
-        pageTitle: 'JHipster Registry'
+        pageTitle: 'Ops Cloud Registry'
     },
     canActivate: [UserRouteAccessService]
 };
