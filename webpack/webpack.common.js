@@ -110,7 +110,7 @@ module.exports = function (options) {
             new StringReplacePlugin(),
             new WebpackNotifierPlugin({
                 title: '提示',
-                contentImage: path.join(__dirname, 'logo-jhipster.png')
+                contentImage: path.join(__dirname, 'logo.png')
             })
         ]
     };
