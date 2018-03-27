@@ -33,13 +33,13 @@ import java.util.Collection;
 @EnableConfigurationProperties({ApplicationProperties.class})
 @EnableDiscoveryClient
 @EnableZuulProxy
-public class JHipsterRegistryApp {
+public class CloudRegistryApp {
 
-    private static final Logger log = LoggerFactory.getLogger(JHipsterRegistryApp.class);
+    private static final Logger log = LoggerFactory.getLogger(CloudRegistryApp.class);
 
     private final Environment env;
 
-    public JHipsterRegistryApp(Environment env) {
+    public CloudRegistryApp(Environment env) {
         this.env = env;
     }
 
@@ -48,7 +48,6 @@ public class JHipsterRegistryApp {
      * <p>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p>
-     * You can find more information on how profiles work with JHipster on <a href="http://www.jhipster.tech/profiles/">http://www.jhipster.tech/profiles/</a>.
      */
     @PostConstruct
     public void initApplication() {
@@ -70,7 +69,7 @@ public class JHipsterRegistryApp {
      * @throws UnknownHostException if the local host name could not be resolved into an address
      */
     public static void main(String[] args) throws UnknownHostException {
-        SpringApplication app = new SpringApplication(JHipsterRegistryApp.class);
+        SpringApplication app = new SpringApplication(CloudRegistryApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         String protocol = "http";
@@ -94,13 +93,11 @@ public class JHipsterRegistryApp {
         if (secretKey == null ) {
             log.error("\n----------------------------------------------------------\n" +
                 "Your JWT secret key is not set up, you will not be able to log into the JHipster.\n"+
-                "Please read the documentation at http://www.jhipster.tech/jhipster-registry/\n" +
                 "----------------------------------------------------------");
         } else if (secretKey.equals("this-secret-should-not-be-used-read-the-comment")) {
             log.error("\n----------------------------------------------------------\n" +
                 "Your JWT secret key is not configured using Spring Cloud Config, you will not be able to \n"+
                 "use the JHipster Registry dashboards to monitor external applications. \n" +
-                "Please read the documentation at http://www.jhipster.tech/jhipster-registry/\n" +
                 "----------------------------------------------------------");
         }
     }
