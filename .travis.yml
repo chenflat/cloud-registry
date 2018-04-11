@@ -3,9 +3,9 @@ os:
 services:
   - docker
 install:
-  - docker build -t chenflat/cloud-registry:travis .
+  - docker build -t supercube/cloud-registry:travis .
   - docker images
-  - docker run --name cloud-registry -p 8761:8761 -d -t chenflat/cloud-registry:travis
+  - docker run --name cloud-registry -p 8761:8761 -d -t supercube/cloud-registry:travis
 script:
   - sleep 45
   - docker ps

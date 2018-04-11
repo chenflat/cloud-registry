@@ -20,12 +20,12 @@ This is the JHipster bug tracker, and it is used for [Issues and Bugs](#issue) a
 If you have a question on using JHipster, or if you need help with your JHipster project, please [read our help page](http://www.jhipster.tech/help/) and use the [JHipster tag on StackOverflow](http://stackoverflow.com/tags/jhipster) or join our [Gitter.im chat room](https://gitter.im/jhipster/generator-jhipster).
 
 ## <a name="issue"></a> Issues and Bugs
-If you find a bug in the source code or a mistake in the documentation, you can help us by [submitting a ticket](https://opensource.guide/how-to-contribute/#opening-an-issue) to our [GitHub issues](https://github.com/chenflat/jhipster-registry/issues). Even better, you can submit a Pull Request to our [JHipster Registry project](https://github.com/chenflat/jhipster-registry) or to our [Documentation project](https://github.com/chenflat/jhipster.github.io).
+If you find a bug in the source code or a mistake in the documentation, you can help us by [submitting a ticket](https://opensource.guide/how-to-contribute/#opening-an-issue) to our [GitHub issues](https://github.com/chenflat/cloud-registry/issues). Even better, you can submit a Pull Request to our [JHipster Registry project](https://github.com/chenflat/cloud-registry) or to our [Documentation project](https://github.com/chenflat/jhipster.github.io).
 
 **Please see the Submission Guidelines below**.
 
 ## <a name="feature"></a> Feature Requests
-You can request a new feature by submitting a ticket to our [GitHub issues](https://github.com/chenflat/jhipster-registry/issues). If you
+You can request a new feature by submitting a ticket to our [GitHub issues](https://github.com/chenflat/cloud-registry/issues). If you
 would like to implement a new feature then consider what kind of change it is:
 
 * **Major Changes** that you wish to contribute to the project should be discussed first. Please open a ticket which clearly states that it is a feature request in the title and explain clearly what you want to achieve in the description, and the JHipster team will discuss with you what should be done in that ticket. You can then start working on a Pull Request.
