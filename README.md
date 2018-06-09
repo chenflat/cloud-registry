@@ -2,7 +2,7 @@
 
 [![Build Status][travis-image]][travis-url]  [![Docker Pulls](https://img.shields.io/docker/pulls/jhipster/jhipster-registry.svg)](https://hub.docker.com/r/jhipster/jhipster-registry/)
 
-This is the [JHipster](http://www.jhipster.tech/) registry service, based on [Spring Cloud Netflix](http://cloud.spring.io/spring-cloud-netflix/), [Eureka](https://github.com/Netflix/eureka) and [Spring Cloud Config](http://cloud.spring.io/spring-cloud-config/).
+This is the Spring Cloud registry service, based on [Spring Cloud Netflix](http://cloud.spring.io/spring-cloud-netflix/), [Eureka](https://github.com/Netflix/eureka) and [Spring Cloud Config](http://cloud.spring.io/spring-cloud-config/).
 
 Full documentation is available on the [JHipster documentation for microservices](http://www.jhipster.tech/microservices-architecture).
 
@@ -29,4 +29,8 @@ To run the cloned repository;
 
 ## Push to Docker Hub
 
-docker push chenflat/cloud-register:3.2.4
+    docker build -t supercube/cloud-registry .
+
+    docker login
+    
+    docker push supercube/cloud-registry:latest
