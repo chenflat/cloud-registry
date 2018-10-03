@@ -15,16 +15,12 @@ RUN \
 FROM openjdk:8-jre-alpine
 ENV SPRING_OUTPUT_ANSI_ENABLED=ALWAYS \
     JAVA_OPTS="" \
-    SPRING_PROFILES_ACTIVE=prod,native \
-    GIT_URI=https://github.com/chenflat/cloud-registry/ \
-    GIT_SEARCH_PATHS=central-config
+    SPRING_PROFILES_ACTIVE=prod
 EXPOSE 8761
 RUN mkdir /target && \
     chmod g+rwx /target
 CMD java \
         ${JAVA_OPTS} -Djava.security.egd=file:/dev/./urandom \
-        -jar /cloud-registry.war \
-        --spring.cloud.config.server.git.uri=${GIT_URI} \
-        --spring.cloud.config.server.git.search-paths=${GIT_SEARCH_PATHS}
+        -jar /cloud-registry.war
 
 COPY --from=builder /cloud-registry.war .

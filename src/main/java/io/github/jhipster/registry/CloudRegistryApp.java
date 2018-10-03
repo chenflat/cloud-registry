@@ -8,16 +8,14 @@ import io.github.jhipster.config.JHipsterConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.actuate.autoconfigure.*;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.PostConstruct;
 import java.net.InetAddress;
@@ -25,17 +23,15 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Collection;
 
-@SpringBootApplication
 @EnableEurekaServer
 @EnableConfigServer
-@ComponentScan
-@EnableAutoConfiguration(exclude = {MetricFilterAutoConfiguration.class, MetricRepositoryAutoConfiguration.class, MetricsDropwizardAutoConfiguration.class})
-@EnableConfigurationProperties({ApplicationProperties.class})
+@SpringBootApplication
+@EnableConfigurationProperties({ApplicationProperties.class, ConfigServerConfig.class})
 @EnableDiscoveryClient
 @EnableZuulProxy
 public class CloudRegistryApp {
 
-    private static final Logger log = LoggerFactory.getLogger(CloudRegistryApp.class);
+    private static final Logger log = LoggerFactory.getLogger(JHipsterRegistryApp.class);
 
     private final Environment env;
 
@@ -48,6 +44,7 @@ public class CloudRegistryApp {
      * <p>
      * Spring profiles can be configured with a program arguments --spring.profiles.active=your-active-profile
      * <p>
+     * You can find more information on how profiles work with JHipster on <a href="http://www.jhipster.tech/profiles/">http://www.jhipster.tech/profiles/</a>.
      */
     @PostConstruct
     public void initApplication() {
@@ -68,13 +65,19 @@ public class CloudRegistryApp {
      * @param args the command line arguments
      * @throws UnknownHostException if the local host name could not be resolved into an address
      */
-    public static void main(String[] args) throws UnknownHostException {
+    public static void main(String[] args) {
         SpringApplication app = new SpringApplication(CloudRegistryApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         String protocol = "http";
         if (env.getProperty("server.ssl.key-store") != null) {
             protocol = "https";
+        }
+        String hostAddress = "localhost";
+        try {
+            hostAddress = InetAddress.getLocalHost().getHostAddress();
+        } catch (Exception e) {
+            log.warn("The host name could not be determined, using `localhost` as fallback");
         }
         log.info("\n----------------------------------------------------------\n\t" +
                 "Application '{}' is running! Access URLs:\n\t" +
@@ -85,20 +88,13 @@ public class CloudRegistryApp {
             protocol,
             env.getProperty("server.port"),
             protocol,
-            InetAddress.getLocalHost().getHostAddress(),
+            hostAddress,
             env.getProperty("server.port"),
             env.getActiveProfiles());
 
-        String secretKey = env.getProperty("jhipster.security.authentication.jwt.secret");
-        if (secretKey == null ) {
-            log.error("\n----------------------------------------------------------\n" +
-                "Your JWT secret key is not set up, you will not be able to log into the JHipster.\n"+
-                "----------------------------------------------------------");
-        } else if (secretKey.equals("this-secret-should-not-be-used-read-the-comment")) {
-            log.error("\n----------------------------------------------------------\n" +
-                "Your JWT secret key is not configured using Spring Cloud Config, you will not be able to \n"+
-                "use the JHipster Registry dashboards to monitor external applications. \n" +
-                "----------------------------------------------------------");
-        }
+        String configServerStatus = env.getProperty("configserver.status");
+        log.info("\n----------------------------------------------------------\n\t" +
+                "Config Server: \t{}\n----------------------------------------------------------",
+            configServerStatus == null ? "Not found or not setup for this application" : configServerStatus);
     }
 }
